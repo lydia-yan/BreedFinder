@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		7D3690312DAB28C30055C2FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D36901B2DAB28C20055C2FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D3690222DAB28C20055C2FE;
+			remoteInfo = DogPhotoUploader;
+		};
+		7D36903B2DAB28C30055C2FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D36901B2DAB28C20055C2FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D3690222DAB28C20055C2FE;
+			remoteInfo = DogPhotoUploader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7D3690232DAB28C20055C2FE /* DogPhotoUploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogPhotoUploader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D3690302DAB28C30055C2FE /* DogPhotoUploaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogPhotoUploaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D36903A2DAB28C30055C2FE /* DogPhotoUploaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogPhotoUploaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		7D3690252DAB28C20055C2FE /* DogPhotoUploader */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DogPhotoUploader;
+			sourceTree = "<group>";
+		};
+		7D3690332DAB28C30055C2FE /* DogPhotoUploaderTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DogPhotoUploaderTests;
+			sourceTree = "<group>";
+		};
+		7D36903D2DAB28C30055C2FE /* DogPhotoUploaderUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DogPhotoUploaderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D3690202DAB28C20055C2FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D36902D2DAB28C30055C2FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D3690372DAB28C30055C2FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D36901A2DAB28C20055C2FE = {
+			isa = PBXGroup;
+			children = (
+				7D3690252DAB28C20055C2FE /* DogPhotoUploader */,
+				7D3690332DAB28C30055C2FE /* DogPhotoUploaderTests */,
+				7D36903D2DAB28C30055C2FE /* DogPhotoUploaderUITests */,
+				7D3690242DAB28C20055C2FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D3690242DAB28C20055C2FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D3690232DAB28C20055C2FE /* DogPhotoUploader.app */,
+				7D3690302DAB28C30055C2FE /* DogPhotoUploaderTests.xctest */,
+				7D36903A2DAB28C30055C2FE /* DogPhotoUploaderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D3690222DAB28C20055C2FE /* DogPhotoUploader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D3690442DAB28C30055C2FE /* Build configuration list for PBXNativeTarget "DogPhotoUploader" */;
+			buildPhases = (
+				7D36901F2DAB28C20055C2FE /* Sources */,
+				7D3690202DAB28C20055C2FE /* Frameworks */,
+				7D3690212DAB28C20055C2FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				7D3690252DAB28C20055C2FE /* DogPhotoUploader */,
+			);
+			name = DogPhotoUploader;
+			packageProductDependencies = (
+			);
+			productName = DogPhotoUploader;
+			productReference = 7D3690232DAB28C20055C2FE /* DogPhotoUploader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7D36902F2DAB28C30055C2FE /* DogPhotoUploaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D3690472DAB28C30055C2FE /* Build configuration list for PBXNativeTarget "DogPhotoUploaderTests" */;
+			buildPhases = (
+				7D36902C2DAB28C30055C2FE /* Sources */,
+				7D36902D2DAB28C30055C2FE /* Frameworks */,
+				7D36902E2DAB28C30055C2FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D3690322DAB28C30055C2FE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				7D3690332DAB28C30055C2FE /* DogPhotoUploaderTests */,
+			);
+			name = DogPhotoUploaderTests;
+			packageProductDependencies = (
+			);
+			productName = DogPhotoUploaderTests;
+			productReference = 7D3690302DAB28C30055C2FE /* DogPhotoUploaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7D3690392DAB28C30055C2FE /* DogPhotoUploaderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D36904A2DAB28C30055C2FE /* Build configuration list for PBXNativeTarget "DogPhotoUploaderUITests" */;
+			buildPhases = (
+				7D3690362DAB28C30055C2FE /* Sources */,
+				7D3690372DAB28C30055C2FE /* Frameworks */,
+				7D3690382DAB28C30055C2FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D36903C2DAB28C30055C2FE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				7D36903D2DAB28C30055C2FE /* DogPhotoUploaderUITests */,
+			);
+			name = DogPhotoUploaderUITests;
+			packageProductDependencies = (
+			);
+			productName = DogPhotoUploaderUITests;
+			productReference = 7D36903A2DAB28C30055C2FE /* DogPhotoUploaderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D36901B2DAB28C20055C2FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					7D3690222DAB28C20055C2FE = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					7D36902F2DAB28C30055C2FE = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 7D3690222DAB28C20055C2FE;
+					};
+					7D3690392DAB28C30055C2FE = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 7D3690222DAB28C20055C2FE;
+					};
+				};
+			};
+			buildConfigurationList = 7D36901E2DAB28C20055C2FE /* Build configuration list for PBXProject "DogPhotoUploader" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D36901A2DAB28C20055C2FE;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 7D3690242DAB28C20055C2FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D3690222DAB28C20055C2FE /* DogPhotoUploader */,
+				7D36902F2DAB28C30055C2FE /* DogPhotoUploaderTests */,
+				7D3690392DAB28C30055C2FE /* DogPhotoUploaderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D3690212DAB28C20055C2FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D36902E2DAB28C30055C2FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D3690382DAB28C30055C2FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D36901F2DAB28C20055C2FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D36902C2DAB28C30055C2FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D3690362DAB28C30055C2FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D3690322DAB28C30055C2FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D3690222DAB28C20055C2FE /* DogPhotoUploader */;
+			targetProxy = 7D3690312DAB28C30055C2FE /* PBXContainerItemProxy */;
+		};
+		7D36903C2DAB28C30055C2FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D3690222DAB28C20055C2FE /* DogPhotoUploader */;
+			targetProxy = 7D36903B2DAB28C30055C2FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7D3690422DAB28C30055C2FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 5GXMK2MSTM;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7D3690432DAB28C30055C2FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 5GXMK2MSTM;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D3690452DAB28C30055C2FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5GXMK2MSTM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Moyan.DogPhotoUploader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7D3690462DAB28C30055C2FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5GXMK2MSTM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Moyan.DogPhotoUploader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7D3690482DAB28C30055C2FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5GXMK2MSTM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Moyan.DogPhotoUploaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DogPhotoUploader.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DogPhotoUploader";
+			};
+			name = Debug;
+		};
+		7D3690492DAB28C30055C2FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5GXMK2MSTM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Moyan.DogPhotoUploaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DogPhotoUploader.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DogPhotoUploader";
+			};
+			name = Release;
+		};
+		7D36904B2DAB28C30055C2FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5GXMK2MSTM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Moyan.DogPhotoUploaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DogPhotoUploader;
+			};
+			name = Debug;
+		};
+		7D36904C2DAB28C30055C2FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5GXMK2MSTM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Moyan.DogPhotoUploaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DogPhotoUploader;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D36901E2DAB28C20055C2FE /* Build configuration list for PBXProject "DogPhotoUploader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D3690422DAB28C30055C2FE /* Debug */,
+				7D3690432DAB28C30055C2FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D3690442DAB28C30055C2FE /* Build configuration list for PBXNativeTarget "DogPhotoUploader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D3690452DAB28C30055C2FE /* Debug */,
+				7D3690462DAB28C30055C2FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D3690472DAB28C30055C2FE /* Build configuration list for PBXNativeTarget "DogPhotoUploaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D3690482DAB28C30055C2FE /* Debug */,
+				7D3690492DAB28C30055C2FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D36904A2DAB28C30055C2FE /* Build configuration list for PBXNativeTarget "DogPhotoUploaderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D36904B2DAB28C30055C2FE /* Debug */,
+				7D36904C2DAB28C30055C2FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D36901B2DAB28C20055C2FE /* Project object */;
+}
