@@ -414,6 +414,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DogPhotoUploader/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BreedFinder;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Need access to your photo library to select dog photos for breed identification";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -444,6 +445,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DogPhotoUploader/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BreedFinder;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Need access to your photo library to select dog photos for breed identification";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
