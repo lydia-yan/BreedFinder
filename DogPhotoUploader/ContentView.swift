@@ -8,6 +8,7 @@
 import SwiftUI
 import PhotosUI
 import Photos
+import UIKit
 
 // Define the model for parsing API responses
 struct DogBreedPrediction: Codable, Identifiable {
@@ -42,8 +43,8 @@ struct ContentView: View {
             VStack {
                 Spacer().frame(height: 30)
                 // Title Area
-                Text("Dog Breed Identification")
-                    .font(.title)
+                Text("BreedFinder")
+                    .font(.largeTitle)
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .center)
                     .padding(.top, 0)
@@ -109,42 +110,64 @@ struct ContentView: View {
                     .background(Color.gray.opacity(0.1))
                     .cornerRadius(10)
                     .padding()
+                    
+                    // Add "Back to Homepage" button outside and below the gray box
+                    Button(action: {
+                        // Reset to initial state
+                        showResults = false
+                        selectedImage = nil
+                        selectedImageData = nil
+                        predictionResult = nil
+                    }) {
+                        Text("Back to Homepage")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                    }
+                    .padding(.horizontal)
+                    .padding(.top, 10)
                 } else {
                     Spacer().frame(height: 30)
                 }
                 
-                Spacer()
+                Spacer().frame(maxHeight: 50)
                 
-                // Select Photo Button
-                Button(action: {
-                    showImagePicker = true
-                }) {
-                    Text("Select Photo")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                        .padding(.horizontal)
+                // Only show these buttons when not displaying results
+                if !showResults {
+                    // Select Photo Button
+                    Button(action: {
+                        showImagePicker = true
+                    }) {
+                        Text("Select Photo")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                            .padding(.horizontal)
+                    }
+                    .padding(.bottom, 8)
+                    
+                    // Upload Button
+                    Button(action: {
+                        uploadImage()
+                    }) {
+                        Text(isUploading ? "Uploading..." : "Upload Photo")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(selectedImage == nil ? Color.gray : Color.green)
+                            .cornerRadius(10)
+                            .padding(.horizontal)
+                    }
+                    .disabled(selectedImage == nil || isUploading)
+                    .padding(.bottom, 20)
                 }
-                .padding(.bottom, 8)
-                
-                // Upload Button
-                Button(action: {
-                    uploadImage()
-                }) {
-                    Text(isUploading ? "Uploading..." : "Upload Photo")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(selectedImage == nil ? Color.gray : Color.green)
-                        .cornerRadius(10)
-                        .padding(.horizontal)
-                }
-                .disabled(selectedImage == nil || isUploading)
-                .padding(.bottom, 20)
             }
             .navigationBarTitleDisplayMode(.inline)
             .sheet(isPresented: $showImagePicker) {
@@ -174,7 +197,7 @@ struct ContentView: View {
     // actual upload function
     func uploadImageToServer(_ imageData: Data) {
         // create request
-        let url = URL(string: "http://127.0.0.1:8000/predict")! //real API
+        let url = URL(string: "http://127.0.0.1:8000/predict/")! //real API
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         
@@ -187,7 +210,7 @@ struct ContentView: View {
         
         // Add image data
         body.append("--\(boundary)\r\n".data(using: .utf8)!)
-        body.append("Content-Disposition: form-data; name=\"predict\"; filename=\"dogphoto.jpg\"\r\n".data(using: .utf8)!)
+        body.append("Content-Disposition: form-data; name=\"file\"; filename=\"dogphoto.jpg\"\r\n".data(using: .utf8)!)
         body.append("Content-Type: image/jpeg\r\n\r\n".data(using: .utf8)!)
         body.append(imageData)
         body.append("\r\n".data(using: .utf8)!)
@@ -243,7 +266,7 @@ struct ContentView: View {
     }
 }
 
-// Photo Picker View
+// Photo Picker View with Camera Option
 struct PhotoPickerView: View {
     @Binding var imageData: Data?
     @Binding var selectedImage: Image?
@@ -251,39 +274,58 @@ struct PhotoPickerView: View {
     @Binding var alertTitle: String
     @Binding var alertMessage: String
     @Environment(\.presentationMode) var presentationMode
+    @State private var showCamera = false
+    @State private var photoItem: PhotosPickerItem? = nil
     
     var body: some View {
-        PhotosPicker(
-            selection: Binding<PhotosPickerItem?>(
-                get: { nil },
-                set: { newItem in
-                    if let newItem = newItem {
-                        loadTransferable(from: newItem)
-                    }
+        VStack(spacing: 20) {
+            // Photo Library Button - 直接使用 PhotosPicker
+            PhotosPicker(
+                selection: $photoItem,
+                matching: .images,
+                photoLibrary: .shared()
+            ) {
+                Text("Select from Photo Library")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue)
+                    .cornerRadius(10)
+            }
+            .padding(.horizontal)
+            .onChange(of: photoItem) { oldItem, newItem in
+                if let newItem = newItem {
+                    loadTransferable(from: newItem)
                 }
-            ),
-            matching: .images,
-            photoLibrary: .shared()
-        ) {
-            Text("Select from Photo Library")
-                .font(.headline)
-                .foregroundColor(.white)
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(Color.blue)
-                .cornerRadius(10)
-                .padding()
+            }
+            
+            // Take Photo Button
+            Button {
+                showCamera = true
+            } label: {
+                Text("Take Photo")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue)
+                    .cornerRadius(10)
+            }
+            .padding(.horizontal)
         }
         .presentationDetents([.medium])
+        .sheet(isPresented: $showCamera) {
+            CameraView(imageData: $imageData, selectedImage: $selectedImage, showAlert: $showAlert, alertTitle: $alertTitle, alertMessage: $alertMessage, presentationMode: presentationMode)
+        }
     }
     
-    // Modify loadTransferable function in PhotoPickerView struct
+    // Load transferable function remains the same
     private func loadTransferable(from item: PhotosPickerItem) {
         item.loadTransferable(type: Data.self) { result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let data):
-                    // Ensure data is not optional before passing to isJPEGOrPNG function
                     if isJPEGOrPNG(data: data ?? Data()) {
                         self.imageData = data
                         if let uiImage = UIImage(data: data ?? Data()) {
@@ -304,7 +346,6 @@ struct PhotoPickerView: View {
         }
     }
 
-    // Modify isJPEGOrPNG function to accept non-optional Data
     private func isJPEGOrPNG(data: Data) -> Bool {
         // JPEG file header identifier is FF D8 FF
         if data.count >= 3 && data[0] == 0xFF && data[1] == 0xD8 && data[2] == 0xFF {
@@ -319,6 +360,63 @@ struct PhotoPickerView: View {
         }
         
         return false
+    }
+}
+
+// Camera View
+struct CameraView: UIViewControllerRepresentable {
+    @Binding var imageData: Data?
+    @Binding var selectedImage: Image?
+    @Binding var showAlert: Bool
+    @Binding var alertTitle: String
+    @Binding var alertMessage: String
+    var presentationMode: Binding<PresentationMode>
+    
+    func makeUIViewController(context: Context) -> UIImagePickerController {
+        let picker = UIImagePickerController()
+        picker.sourceType = .camera
+        picker.delegate = context.coordinator
+        return picker
+    }
+    
+    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {}
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+    
+    class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+        let parent: CameraView
+        
+        init(_ parent: CameraView) {
+            self.parent = parent
+        }
+        
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            if let image = info[.originalImage] as? UIImage {
+                // Convert UIImage to JPEG data
+                if let jpegData = image.jpegData(compressionQuality: 0.8) {
+                    parent.imageData = jpegData
+                    parent.selectedImage = Image(uiImage: image)
+                    
+                    // Close the camera view and the photo picker view
+                    picker.dismiss(animated: true) {
+                        self.parent.presentationMode.wrappedValue.dismiss()
+                    }
+                } else {
+                    parent.alertTitle = "Error"
+                    parent.alertMessage = "Failed to convert image"
+                    parent.showAlert = true
+                    picker.dismiss(animated: true)
+                }
+            } else {
+                picker.dismiss(animated: true)
+            }
+        }
+        
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            picker.dismiss(animated: true)
+        }
     }
 }
 
