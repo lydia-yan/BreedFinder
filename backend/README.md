@@ -13,9 +13,7 @@ This is a FastAPI-based API that predicts dog breeds from images using a pre-tra
 ## Prerequisites
 
 - **Python**: 3.12 (other 3.7+ versions may work).
-- **Homebrew** (macOS): For installing `libjpeg`.
 - **Git**: To clone the repository.
-- **Postman**: For testing API endpoints.
 - **Model Weights**: Ensure `weights/resnet50_dog_breed_classifier.pth` is in the `backend/weights/` directory (not included in the repo; contact the team for access).
 
 ## Build Process
